@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teriyaki Hale | Island Flavor In Every Bite</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --dark-green: #1B4D3E;
+            --bright-yellow: #FFD200;
+            --cream: #FFF9E6;
+            --text-color: #333;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--cream);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--dark-green);
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: var(--bright-yellow);
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: white;
+        }
+
+        .hero img {
+            max-width: 300px;
+            height: auto;
+        }
+
+        section {
+            padding: 60px 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        h2 {
+            color: var(--dark-green);
+            border-bottom: 3px solid var(--bright-yellow);
+            display: inline-block;
+            margin-bottom: 30px;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .menu-item {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 5px solid var(--dark-green);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .menu-item h3 {
+            margin-top: 0;
+            color: var(--dark-green);
+        }
+
+        .sauce-highlight {
+            background-color: var(--bright-yellow);
+            padding: 15px;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .event-card {
+            background: var(--dark-green);
+            color: white;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        footer {
+            background: var(--dark-green);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        /* Form Styling */
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: var(--dark-green);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #266b56;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="#menu">Menu</a>
+        <a href="#events">Events</a>
+        <a href="#catering">Catering</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<div class="hero">
+    <img src="TeriyakiHaleLogo 1.jpg" alt="Teriyaki Hale Logo">
+    <h1>Island Flavor In Every Bite</h1>
+</div>
+
+<section id="menu">
+    <h2>Our Menu</h2>
+    <div class="menu-grid">
+        <div class="menu-item">
+            <h3>Island Hotdog</h3>
+            <p>All-beef hotdog topped with our signature fresh pineapple mango salsa.</p>
+        </div>
+        <div class="menu-item">
+            <h3>Teriyaki Burger</h3>
+            <p>Juicy burger glazed in teriyaki sauce, topped with a grilled slice of pineapple.</p>
+        </div>
+        <div class="menu-item">
+            <h3>Chicken Teriyaki Bowl</h3>
+            <p>Tender grilled chicken served over a bed of fluffy rice and steamed seasonal veggies.</p>
+        </div>
+    </div>
+
+    <h3 style="margin-top:40px;">Signature Sauces</h3>
+    <div class="sauce-highlight">
+        🔥 Hale Hot Mayo | 🌴 Hale Teriyaki Sauce
+    </div>
+</section>
+
+<section id="events" style="background-color: #f2f2f2; width: 100%; max-width: 100%; box-sizing: border-box;">
+    <div style="max-width: 900px; margin: auto;">
+        <h2>Upcoming Festivals & Fairs</h2>
+        <p>Catch our food booth at these upcoming seasonal events:</p>
+        <div class="event-card">
+            <strong>Summer Island Fest</strong> - July 15-17 (City Park)
+        </div>
+        <div class="event-card">
+            <strong>County Fair & Rodeo</strong> - August 5-10 (Fairgrounds)
+        </div>
+        <p><em>Check back often for newly added dates!</em></p>
+    </div>
+</section>
+
+<section id="catering">
+    <h2>Catering Services</h2>
+    <p>Bring the "Hale" to your next party! We offer full catering for corporate events, birthdays, and weddings. From individual bowls to large party platters, we've got you covered.</p>
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <p>Have questions or want to book us for an event?</p>
+    <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Tell us about your event or inquiry..."></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+    <div style="margin-top: 20px; text-align: center;">
+        <p>📞 Phone: (555) 000-0000</p>
+        <p>📧 Email: aloha@teriyakihale.com</p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2023 Teriyaki Hale. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

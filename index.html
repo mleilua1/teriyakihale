@@ -369,30 +369,57 @@
         <p class="custom-note"><em>*Ideal for events of 15+ people. Contact us below for a custom quote.</em></p>
     </div>
 </section>
-<section id="contact">
+<section id="contact" style="background-color: #FFF9E6; padding: 60px 20px; text-align: center;">
+    <style>
+        #contact h2 {
+            color: #1B4D3E;
+            border-bottom: 3px solid #FFD200;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+        .contact-form {
+            max-width: 600px;
+            margin: 40px auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .contact-form input, .contact-form textarea {
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        .contact-form button {
+            background-color: #1B4D3E;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .contact-form button:hover {
+            background-color: #143a2f;
+        }
+    </style>
+
     <h2>Contact Us</h2>
     <p>Have questions or want to book us for an event?</p>
 
-    <form>
-
+    <form class="contact-form">
         <input type="text" placeholder="Your Name" required>
-
         <input type="email" placeholder="Your Email" required>
-
-        <textarea rows="5" placeholder="Tell us about your event or inquiry..."></textarea>
-
+        <input type="text" placeholder="Event Delivery Address (for fee calculation)" required>
+        <textarea rows="5" placeholder="Tell us about your event (Date, number of guests, meal choices)..."></textarea>
         <button type="submit">Send Message</button>
-
     </form>
 
-    <div style="margin-top: 20px; text-align: center;">
-
+    <div style="margin-top: 30px;">
         <p>📞 Phone: (801) 703-3233</p>
-
         <p>📧 Email: aloha@teriyakihale.com</p>
-
     </div>
-
 </section>
 <footer>
     <p>&copy; 2023 Teriyaki Hale. All Rights Reserved.</p>

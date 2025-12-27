@@ -202,6 +202,85 @@
 
 <section id="catering">
     <div class="catering-header">
+        #catering {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.intro-text {
+    text-align: center;
+    font-size: 1.1em;
+    margin-bottom: 40px;
+}
+
+.catering-container {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.catering-package {
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 30px;
+    border-radius: 15px;
+    flex: 1;
+    min-width: 320px;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+/* Style for the featured popular meal */
+.catering-package.featured {
+    border: 2px solid #d35400;
+    box-shadow: 0 10px 25px rgba(211, 84, 0, 0.1);
+}
+
+.badge {
+    color: #d35400;
+    font-weight: bold;
+    font-size: 0.8em;
+    letter-spacing: 1px;
+}
+
+.subtitle {
+    font-style: italic;
+    color: #666;
+    font-size: 0.9em;
+    margin: 10px 0;
+}
+
+.meal-details {
+    list-style: none;
+    padding: 0;
+}
+
+.meal-details li {
+    padding: 8px 0;
+    border-bottom: 1px solid #f9f9f9;
+}
+
+.alacarte-menu {
+    background: #fdf2e9;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.alacarte-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin: 25px 0;
+}
+
+.custom-note {
+    font-size: 0.9em;
+    color: #555;
+}
         <h2>Catering Services</h2>
         <p class="intro-text">Aloha & welcome to our catering! Each meal is packed in eco-friendly trays, ready for your gathering. <strong>Orders require 48 hours notice.</strong></p>
     </div>
@@ -249,7 +328,33 @@
         <p class="custom-note"><em>*Ideal for events of 15+ people. Contact us for a custom quote.</em></p>
     </div>
 </section>
+<section id="contact">
 
+    <h2>Contact Us</h2>
+
+    <p>Have questions or want to book us for an event?</p>
+
+    <form>
+
+        <input type="text" placeholder="Your Name" required>
+
+        <input type="email" placeholder="Your Email" required>
+
+        <textarea rows="5" placeholder="Tell us about your event or inquiry..."></textarea>
+
+        <button type="submit">Send Message</button>
+
+    </form>
+
+    <div style="margin-top: 20px; text-align: center;">
+
+        <p>📞 Phone: (801) 703-3233</p>
+
+        <p>📧 Email: aloha@teriyakihale.com</p>
+
+    </div>
+
+</section>
 <footer>
     <p>&copy; 2023 Teriyaki Hale. All Rights Reserved.</p>
 </footer>

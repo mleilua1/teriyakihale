@@ -199,96 +199,160 @@
         <p><em>Check back often for newly added dates!</em></p>
     </div>
 </section>
-
 <section id="catering">
+    <style>
+        #catering {
+            padding: 60px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+        }
+
+        .catering-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .catering-header h2 {
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .intro-text {
+            font-size: 1.1em;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .catering-container {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 50px;
+        }
+
+        .catering-package {
+            background: #fff;
+            border: 1px solid #eee;
+            padding: 30px;
+            border-radius: 15px;
+            flex: 1;
+            min-width: 320px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .catering-package:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Highlights the Luau Meal */
+        .catering-package.featured {
+            border: 2px solid #d35400;
+            box-shadow: 0 10px 25px rgba(211, 84, 0, 0.1);
+        }
+
+        .badge {
+            display: inline-block;
+            background: #fdf2e9;
+            color: #d35400;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.8em;
+            margin-bottom: 15px;
+        }
+
+        .catering-package h3 {
+            margin: 0 0 5px 0;
+            font-size: 1.5em;
+        }
+
+        .price-tag {
+            font-size: 1.4em;
+            color: #27ae60;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-style: italic;
+            color: #666;
+            font-size: 0.95em;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .meal-details {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .meal-details li {
+            padding: 10px 0;
+            border-bottom: 1px solid #f1f1f1;
+            font-size: 0.95em;
+        }
+
+        .meal-details li:last-child {
+            border-bottom: none;
+        }
+
+        .alacarte-menu {
+            background: #fdf2e9;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .alacarte-grid {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin: 25px 0;
+        }
+
+        .alacarte-item p {
+            margin: 0;
+            font-size: 1.1em;
+        }
+
+        .alacarte-item small {
+            color: #777;
+        }
+
+        .custom-note {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #d35400;
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .catering-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+
     <div class="catering-header">
-              <h2>Catering Services</h2>
-        <p class="intro-text">Aloha & welcome to our catering! Each meal is packed in eco-friendly trays, ready for your gathering. <strong>Orders require 48 hours notice.</strong></p>
+        <h2>Catering Services</h2>
+        <p class="intro-text">Aloha & welcome to our catering! Each meal is packed in eco-friendly trays, ready for your gathering. <br><strong>Orders require 48 hours notice.</strong></p>
     </div>
-  #catering {
-    padding: 60px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
 
-.intro-text {
-    text-align: center;
-    font-size: 1.1em;
-    margin-bottom: 40px;
-}
-
-.catering-container {
-    display: flex;
-    gap: 25px;
-    flex-wrap: wrap;
-    margin-bottom: 50px;
-}
-
-.catering-package {
-    background: #fff;
-    border: 1px solid #eee;
-    padding: 30px;
-    border-radius: 15px;
-    flex: 1;
-    min-width: 320px;
-    position: relative;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-}
-
-/* Style for the featured popular meal */
-.catering-package.featured {
-    border: 2px solid #d35400;
-    box-shadow: 0 10px 25px rgba(211, 84, 0, 0.1);
-}
-
-.badge {
-    color: #d35400;
-    font-weight: bold;
-    font-size: 0.8em;
-    letter-spacing: 1px;
-}
-
-.subtitle {
-    font-style: italic;
-    color: #666;
-    font-size: 0.9em;
-    margin: 10px 0;
-}
-
-.meal-details {
-    list-style: none;
-    padding: 0;
-}
-
-.meal-details li {
-    padding: 8px 0;
-    border-bottom: 1px solid #f9f9f9;
-}
-
-.alacarte-menu {
-    background: #fdf2e9;
-    padding: 40px;
-    border-radius: 15px;
-    text-align: center;
-}
-
-.alacarte-grid {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-    margin: 25px 0;
-}
-
-.custom-note {
-    font-size: 0.9em;
-    color: #555;
-}
     <div class="catering-container">
         <div class="catering-package">
-            <span class="badge">01</span>
-            <h3>The Hale Ohana Meal — $48</h3>
-            <p class="subtitle">Perfect for a family meal or small office lunch • Serves 3-4 people</p>
+            <span class="badge">Option 01</span>
+            <h3>The Hale Ohana Meal</h3>
+            <span class="price-tag">$48</span>
+            <span class="subtitle">Perfect for a family meal or small office lunch • Serves 3-4 people</span>
             <ul class="meal-details">
                 <li><strong>24 oz Protein:</strong> Teriyaki Chicken or Thinly Sliced Beef</li>
                 <li><strong>Steamed White Rice</strong> (a generous portion)</li>
@@ -297,14 +361,15 @@
         </div>
 
         <div class="catering-package featured">
-            <span class="badge">02</span>
-            <h3>The Hale Luau Meal — $92</h3>
-            <p class="subtitle">Our most popular choice for parties & celebrations • Serves 8-10 people</p>
+            <span class="badge">Most Popular 02</span>
+            <h3>The Hale Luau Meal</h3>
+            <span class="price-tag">$92</span>
+            <span class="subtitle">Our best value for parties & celebrations • Serves 8-10 people</span>
             <ul class="meal-details">
                 <li><strong>48 oz Protein:</strong> Teriyaki Chicken or Thinly Sliced Beef</li>
                 <li><strong>Steamed White Rice</strong> (a large portion)</li>
-                <li><strong>Choice of 2 Sides:</strong> Gochu Cucumber, Asian Cabbage, or Classic Mac Salad</li>
-                <li><strong>BONUS:</strong> Includes 12 warm, soft dinner rolls & butter packets</li>
+                <li><strong>Choice of 2 Sides:</strong> Gochu Cucumber, Asian Cabbage, or Mac Salad</li>
+                <li><strong>BONUS:</strong> Includes 12 warm, soft dinner rolls & butter</li>
             </ul>
         </div>
     </div>
@@ -313,18 +378,19 @@
         <h3>À La Carte & Large Orders</h3>
         <div class="alacarte-grid">
             <div class="alacarte-item">
-                <p><strong>Proteins:</strong> $16 per pound</p>
-                <small>Teriyaki Chicken or Thinly Sliced Beef</small>
+                <p><strong>Proteins:</strong> $16 / lb</p>
+                <small>Chicken or Sliced Beef</small>
             </div>
             <div class="alacarte-item">
-                <p><strong>Steamed Rice:</strong> $8 per quart</p>
+                <p><strong>Steamed Rice:</strong> $8 / qt</p>
+                <small>Fresh & fluffy</small>
             </div>
             <div class="alacarte-item">
-                <p><strong>Side Salads:</strong> $12 per half-tray</p>
+                <p><strong>Side Salads:</strong> $12 / half-tray</p>
                 <small>Serves 8-10 people</small>
             </div>
         </div>
-        <p class="custom-note"><em>*Ideal for events of 15+ people. Contact us for a custom quote.</em></p>
+        <p class="custom-note"><em>*Ideal for events of 15+ people. Contact us below for a custom quote.</em></p>
     </div>
 </section>
 <section id="contact">

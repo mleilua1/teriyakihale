@@ -376,6 +376,7 @@
             border-bottom: 3px solid #FFD200;
             display: inline-block;
             padding-bottom: 5px;
+            font-family: inherit;
         }
         .contact-form {
             max-width: 600px;
@@ -383,12 +384,15 @@
             display: flex;
             flex-direction: column;
             gap: 15px;
+            text-align: left;
         }
         .contact-form input, .contact-form textarea {
             padding: 12px;
             border: 1px solid #ccc;
             border-radius: 5px;
             font-size: 1em;
+            width: 100%;
+            box-sizing: border-box;
         }
         .contact-form button {
             background-color: #1B4D3E;
@@ -397,6 +401,7 @@
             border: none;
             border-radius: 5px;
             font-weight: bold;
+            font-size: 1.1em;
             cursor: pointer;
             transition: background 0.3s;
         }
@@ -407,17 +412,18 @@
 
     <h2>Contact Us</h2>
     <p>Have questions or want to book us for an event?</p>
-<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
-    
-    <input type="hidden" name="_next" value="https://teriyakihale.com/thanks.html">
-    
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <input type="text" name="address" placeholder="Event Delivery Address" required>
-    <textarea name="details" rows="5" placeholder="Tell us about your event..." required></textarea>
-    
-    <button type="submit">Send Message</button>
-</form>
+
+    <form action="https://formspree.io/f/xjgvganv" method="POST" class="contact-form">
+        
+        <input type="hidden" name="_next" value="https://teriyakihale.com/thanks.html">
+        
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="text" name="address" placeholder="Event Delivery Address (for fee calculation)" required>
+        <textarea name="details" rows="5" placeholder="Tell us about your event (Date, guests, etc.)..." required></textarea>
+
+        <button type="submit">Send Message</button>
+    </form>
 
     <div style="margin-top: 30px;">
         <p>📞 Phone: (801) 703-3233</p>

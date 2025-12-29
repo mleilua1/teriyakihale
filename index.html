@@ -459,7 +459,7 @@
         * { box-sizing: border-box; }
         body { font-family: sans-serif; margin: 0; padding: 20px; background: #f9f9f9; }
         .container { max-width: 1000px; margin: auto; text-align: center; }
-        h1 { color: #d32; margin-bottom: 10px; }
+        h1 { color: #1B4D3E; margin-bottom: 10px; } /* Green color for heading */
         .subtitle { color: #666; margin-bottom: 40px; }
         
         /* Gallery Grid */
@@ -502,10 +502,30 @@
             font-style: italic;
         }
         
-        /* Navigation */
+        /* Navigation in body */
         .nav { margin: 30px 0; }
-        .nav a { color: #d32; text-decoration: none; margin: 0 10px; }
+        .nav a { color: #1B4D3E; text-decoration: none; margin: 0 10px; font-weight: bold; }
         .nav a:hover { text-decoration: underline; }
+        
+        /* Footer Styles */
+        .site-footer {
+            background-color: #18403E; /* Your existing footer green */
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+        .site-footer a {
+            color: white; /* White text for footer links */
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .site-footer a:hover {
+            text-decoration: underline;
+        }
+        .site-footer p {
+            margin: 10px 0;
+        }
     </style>
 </head>
 <body>
@@ -517,7 +537,7 @@
             <!-- Photo 1 Placeholder -->
             <div class="gallery-item">
                 <div class="placeholder">📸 Photo Coming Soon</div>
-                <div class="caption">Our first festival setup at 13th Annual Utah Pacific Island Heritage </div>
+                <div class="caption">At 13th Annual Utah Pacific Island Heritage</div>
             </div>
             <!-- Photo 2 Placeholder -->
             <div class="gallery-item">
@@ -553,18 +573,17 @@
             | 
             <a href="/about.html">About Us</a>
         </div>
-        
-        <p><small>© 2025 Teriyaki Hale. All Rights Reserved.</small></p>
     </div>
-</body>
-</html>    
     
-</footer>        
-</section>
-
-<footer style="background-color: #1B4D3E; color: white; padding: 20px; text-align: center;">
-    <p style="margin: 0;">&copy; 2025 Teriyaki Hale. All Rights Reserved.</p>
-</footer>
-
+    <!-- Your green footer -->
+    <footer class="site-footer">
+        <p>
+            <a href="/">Home</a> | 
+            <a href="/#menu">Menu</a> | 
+            <a href="/about.html">About</a> | 
+            <a href="/gallery.html">Gallery</a>
+        </p>
+        <p><small>&copy; 2025 Teriyaki Hale. All Rights Reserved.</small></p>
+    </footer>
 </body>
 </html>

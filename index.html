@@ -535,7 +535,12 @@
     <h2>Contact Us</h2>
     <p>Have questions or want to book us for an event? Send details below and we’ll reply within 24 hours.</p>
 
-    <form action="mailto:aloha@teriyakihale.com" method="post" enctype="text/plain" style="display:flex; flex-direction:column; gap:18px;">
+    <form action="https://formspree.io/f/xjgvganv" method="POST">
+  <!-- Optional but highly recommended -->
+  <input type="hidden" name="_subject" value="New Catering Quote Request – Teriyaki Hale">
+  <!-- If you have a thank-you page, use it. If not, remove this line. -->
+  <input type="hidden" name="_next" value="https://teriyakihale.com/#contact">
+
 
       <input type="text" name="name" placeholder="Your Name" required>
 

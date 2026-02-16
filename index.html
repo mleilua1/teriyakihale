@@ -530,26 +530,89 @@
         }
     </style>
 
+   <section id="contact" style="background-color:#f2f2f2; width:100%; max-width:100%; box-sizing:border-box;">
+  <div style="max-width:900px; margin:auto;">
     <h2>Contact Us</h2>
-    <p>Have questions or want to book us for an event?</p>
+    <p>Have questions or want to book us for an event? Send details below and we’ll reply within 24 hours.</p>
 
-    <form action="https://formspree.io/f/xjgvganv" method="POST" class="contact-form">
-        <input type="hidden" name="_next" value="https://teriyakihale.com/thanks.html">
-        <input type="hidden" name="_subject" value="New Catering Inquiry - Teriyaki Hale">
+    <form action="mailto:aloha@teriyakihale.com" method="post" enctype="text/plain" style="display:flex; flex-direction:column; gap:18px;">
 
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <input type="text" name="address" placeholder="Event Delivery Address (for fee calculation)" required>
-        <textarea name="details" rows="5" placeholder="Tell us about your event (Date, guests, etc.)..." required></textarea>
+      <input type="text" name="name" placeholder="Your Name" required>
 
-        <button type="submit">Send Message</button>
+      <input type="tel" name="phone" placeholder="Your Phone (best number to text/call)" required>
+
+      <input type="email" name="email" placeholder="Your Email" required>
+
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:18px;">
+        <input type="date" name="event_date" required>
+        <input type="time" name="event_time" required>
+      </div>
+
+      <input type="number" name="guest_count" placeholder="Estimated Guest Count" min="1" required>
+
+      <select name="service_type" required>
+        <option value="" disabled selected>Service Type</option>
+        <option>Drop-Off Catering</option>
+        <option>Full-Service Buffet Setup</option>
+        <option>On-Site Cooking Experience (Quote)</option>
+        <option>Not Sure Yet</option>
+      </select>
+
+      <select name="package_interest" required>
+        <option value="" disabled selected>Package Interested In</option>
+        <option>Hale Ohana (25+ guests)</option>
+        <option>Hale Luau (25+ guests)</option>
+        <option>Hale Island (50+ guests)</option>
+        <option>Hale Party Package — Small (4–5 guests)</option>
+        <option>Hale Party Package — Large (8–10 guests)</option>
+        <option>Not Sure — Help Me Choose</option>
+      </select>
+
+      <select name="protein_preference">
+        <option value="" disabled selected>Protein Preference (optional)</option>
+        <option>Teriyaki Chicken</option>
+        <option>Kalua Pork</option>
+        <option>Thinly Sliced Beef (premium upgrade)</option>
+        <option>Mix of Proteins</option>
+      </select>
+
+      <select name="beef_upgrade">
+        <option value="" disabled selected>Beef Upgrade (optional)</option>
+        <option>No beef upgrade</option>
+        <option>Add Beef (+$3 per person)</option>
+        <option>Beef as main protein (+$4 per person)</option>
+      </select>
+
+      <select name="specialty_items">
+        <option value="" disabled selected>Specialty Island Selections (optional)</option>
+        <option>None</option>
+        <option>Teriyaki Garlic Shrimp (market price)</option>
+        <option>Hale Poke (market price)</option>
+        <option>Ask me about specialty options</option>
+      </select>
+
+      <input type="text" name="event_address" placeholder="Event Address (for delivery fee estimate)">
+
+      <textarea name="message" rows="5" placeholder="Tell us about your event (venue, dietary needs, timing, etc.)..." required></textarea>
+
+      <button type="submit" style="background:#1B4D3E; color:#fff; padding:14px 18px; border:none; border-radius:6px; font-weight:700;">
+        Request Quote
+      </button>
+
+      <p style="font-size:0.9em; color:#666; margin-top:-6px;">
+        * Minimums: 25 guests for catering packages (50+ for Hale Island). Specialty items are market price and availability may vary.
+      </p>
+
     </form>
 
-    <div class="sauce-highlight" style="margin-top: 20px; text-align: center;">
-        <span style="margin-right: 20px;">📞 <strong>Phone:</strong> (801) 703-3233</span>
-        <span>📧 <strong>Email:</strong> aloha@teriyakihale.com</span>
+    <div class="sauce-highlight" style="margin-top:18px;">
+      <p style="margin:0;">
+        📞 <strong>Phone:</strong> (801) 703-3233 &nbsp;&nbsp;&nbsp; ✉️ <strong>Email:</strong> aloha@teriyakihale.com
+      </p>
     </div>
+  </div>
 </section>
+
 <!-- ======= About Us Section ======= -->
 <section id="about">
   <div class="section-header">

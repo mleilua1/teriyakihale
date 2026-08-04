@@ -53,8 +53,9 @@
 
         section {
             padding: 60px 20px;
-            max-width: 900px;
+            max-width: 1100px;
             margin: auto;
+            box-sizing: border-box;
         }
 
         h2 {
@@ -62,8 +63,65 @@
             border-bottom: 3px solid var(--bright-yellow);
             display: inline-block;
             margin-bottom: 30px;
+            padding-bottom: 5px;
         }
 
+        /* Catering Grid & Card Styling */
+        .catering-header {
+            margin-bottom: 20px;
+        }
+
+        .intro-text {
+            font-size: 1.1em;
+            margin-top: 10px;
+            line-height: 1.6;
+        }
+
+        .catering-container {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .catering-package {
+            background: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            flex: 1;
+            min-width: 300px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border-left: 6px solid var(--dark-green);
+            text-align: left;
+        }
+
+        .catering-package h3 {
+            color: var(--dark-green);
+            margin-top: 0;
+            font-size: 1.3em;
+        }
+
+        .subtitle {
+            font-style: italic;
+            color: #555;
+            font-size: 0.95em;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .meal-details {
+            list-style: disc;
+            padding-left: 20px;
+            margin: 0;
+        }
+
+        .meal-details li {
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        /* Menu Grid */
         .menu-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -98,35 +156,52 @@
             border-radius: 5px;
         }
 
-        footer {
-            background: var(--dark-green);
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 40px;
+        /* Form Styling */
+        .contact-form { 
+            max-width: 600px; 
+            margin: 30px auto 20px auto; 
+            display: flex; 
+            flex-direction: column; 
+            gap: 15px; 
+            text-align: left; 
         }
 
-        /* Form Styling */
-        input, textarea {
+        input, textarea, select {
             width: 100%;
-            padding: 10px;
-            margin: 10px 0;
+            padding: 12px;
+            margin: 5px 0;
             border: 1px solid #ccc;
-            border-radius: 4px;
+            border-radius: 5px;
+            box-sizing: border-box;
+            background-color: #ffffff;
+            font-family: inherit;
         }
 
         button {
             background-color: var(--dark-green);
             color: white;
-            padding: 10px 20px;
+            padding: 15px 20px;
             border: none;
-            border-radius: 4px;
+            border-radius: 5px;
             cursor: pointer;
             font-weight: bold;
+            font-size: 1rem;
         }
 
         button:hover {
             background-color: #266b56;
+        }
+
+        footer {
+            background: var(--dark-green);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .catering-container { flex-direction: column; }
         }
     </style>
 </head>
@@ -134,11 +209,11 @@
 
 <header>
     <nav>
+        <a href="#catering">Catering</a>
         <a href="#menu">Menu</a>
         <a href="#events">Events</a>
-        <a href="#catering">Catering</a>
         <a href="#contact">Contact</a>
-        <a href="#about">About Teriyaki Hale</a>
+        <a href="#about">About</a>
         <a href="#gallery">Gallery</a>
     </nav>
 </header>
@@ -147,82 +222,115 @@
     <img src="TeriyakiHaleLogo 1.png" alt="Teriyaki Hale Logo">
     <h1>Island Flavor In Every Bite</h1>
 </div>
-<!-- =========================
-     ISLAND CATERING PACKAGES
-     Place this section RIGHT under your hero section
-     (and ABOVE your Food Booth Menu)
-========================== -->
 
-<section id="catering" class="catering-section">
+<!-- =========================
+     CATERING SECTION
+========================== -->
+<section id="catering">
+  
+  <!-- Hale Party Packages -->
+  <div class="catering-header">
+    <h2>Hale Party Packages</h2>
+    <p class="intro-text">Aloha & welcome to our catering! Ready-to-serve trays included with every order. <strong>Orders require 48 hours notice.</strong></p>
+  </div>
+
+  <div class="catering-container">
+    <!-- Small Package (10 Guests) -->
+    <div class="catering-package">
+      <h3>Hale Party Package – Small (10 Guests) $129.99</h3>
+      <span class="subtitle">Perfect for a family meal or small office lunch • Serves 10 people</span>
+      <ul class="meal-details">
+        <li><strong>64 oz Standard Protein:</strong> Teriyaki Chicken</li>
+        <li><strong>Premium Upgrade:</strong> Teriyaki Sliced Beef +$49 per tray</li>
+        <li><strong>Steamed White Rice</strong> (a generous portion)</li>
+        <li><strong>Choice of 1 Side:</strong> Asian Cabbage Salad, Classic Mac Salad, or Mixed Fruit Tray</li>
+      </ul>
+    </div>
+
+    <!-- Large Package (20 Guests) -->
+    <div class="catering-package">
+      <h3>🌸 Hale Party Package – Large (20 Guests) $259.99</h3>
+      <span class="subtitle">Our most popular choice for parties & celebrations • Serves 20 people</span>
+      <ul class="meal-details">
+        <li><strong>128 oz Standard Protein:</strong> Teriyaki Chicken</li>
+        <li><strong>Premium Upgrade:</strong> Teriyaki Sliced Beef +$79 per tray</li>
+        <li><strong>Steamed White Rice</strong> (a large portion)</li>
+        <li><strong>Choice of 2 Sides:</strong> Asian Cabbage Salad, Classic Mac Salad, or Mixed Fruit Tray</li>
+        <li><strong>BONUS:</strong> Includes 24 warm, soft dinner rolls & butter packets</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Delivery & Logistics Banner -->
+  <div class="sauce-highlight" style="margin-top: 20px; margin-bottom: 50px;">
+      <p style="margin-bottom: 5px;">🚚 <strong>Delivery & Logistics</strong></p>
+      <p style="font-weight: normal; font-size: 0.95em;">
+          Delivery fees are calculated based on distance from our commissary kitchen. 
+          Free local pickup may be available upon request.
+      </p>
+      <p style="font-style: italic; font-size: 0.9em; margin-top: 10px;">
+          *For events up to 29 guests, we recommend a combination of our Party Packages. Per-person Luau Packages available for groups of 30+. <a href="#contact" style="color: #1B4D3E; font-weight: bold;">Contact us</a> for custom quotes.
+      </p>
+  </div>
+
+  <!-- Island Catering / Luau Packages -->
   <div class="catering-header">
     <h2>Island Catering Packages</h2>
     <p class="intro-text">
-      Bring island flavor to your next event — perfect for birthdays, church gatherings, corporate lunches & celebrations.
-      <strong>72 hours notice • 25 guest minimum • 30% deposit to reserve your date.</strong>
+      Bring island flavor to your next event — perfect for birthdays, church gatherings, corporate lunches & celebrations. 
+      <strong>48 hours notice • 30 guest minimum • 30% deposit to reserve your date.</strong>
     </p>
   </div>
 
   <div class="catering-container">
-
-  <div class="luau-packages-container" style="margin-top: 40px;">
-  
-  <!-- Hale Luau Tier -->
-  <div class="luau-card">
-    <div class="luau-header">
-      <h3 class="luau-title">🌸 Hale Luau</h3>
-      <span class="luau-price">Starting at $19 / person</span>
+    <!-- Hale Luau Tier -->
+    <div class="catering-package">
+      <h3>🌸 Hale Luau – Starting at $19 / person</h3>
+      <span class="subtitle">1 Protein • Best for casual gatherings • 30+ guests</span>
+      <ul class="meal-details">
+        <li><strong>1 Standard Protein:</strong> Teriyaki Chicken or Kalua Pork</li>
+        <li><strong>Premium Option:</strong> Teriyaki Sliced Beef available for +$5 per person</li>
+        <li><strong>Steamed White Rice</strong> (generous portion)</li>
+        <li><strong>Choice of 1 Side:</strong> Asian Cabbage Salad, Classic Mac Salad, or Mixed Fruit Tray</li>
+        <li><strong>Included:</strong> Ready-to-serve trays & serving utensils</li>
+      </ul>
     </div>
-    <p class="luau-subtitle">1 Protein • Best for casual gatherings • 30+ guests</p>
-    <ul class="luau-details">
-      <li><strong>1 Standard Protein:</strong> Teriyaki Chicken or Kalua Pork</li>
-      <li><strong>Premium Option:</strong> Teriyaki Sliced Beef available for +$5 per person</li>
-      <li><strong>Steamed White Rice</strong> (generous portion)</li>
-      <li><strong>Choice of 1 Side:</strong> Asian Cabbage Salad, Classic Mac Salad, or Mixed Fruit Tray</li>
-      <li><strong>Included:</strong> Ready-to-serve trays & serving utensils</li>
-    </ul>
+
+    <!-- Hale Feast Tier -->
+    <div class="catering-package">
+      <h3>🌴 Hale Feast – Starting at $23 / person</h3>
+      <span class="subtitle">2 Proteins • Our most popular option • 30+ guests</span>
+      <ul class="meal-details">
+        <li><strong>2 Standard Proteins:</strong> Teriyaki Chicken + Kalua Pork</li>
+        <li><strong>Premium Upgrade:</strong> Swap or add Teriyaki Sliced Beef for +$5 per person</li>
+        <li><strong>Steamed White Rice</strong> (large portion)</li>
+        <li><strong>Choice of 2 Sides:</strong> Asian Cabbage Salad, Classic Mac Salad, or Mixed Fruit Tray</li>
+        <li><strong>BONUS:</strong> Dinner rolls & butter packets</li>
+        <li><strong>Included:</strong> Ready-to-serve trays & serving utensils</li>
+      </ul>
+    </div>
+
+    <!-- Hale Island Experience Tier -->
+    <div class="catering-package" style="flex: 100%;">
+      <h3>🔥 Hale Island Experience – Starting at $29 / person</h3>
+      <span class="subtitle">3 Proteins • Premium experience • 50+ guests</span>
+      <ul class="meal-details">
+        <li><strong>3 Proteins:</strong> Teriyaki Chicken + Kalua Pork + Teriyaki Sliced Beef</li>
+        <li><strong>Steamed White Rice</strong> (extra-large portion)</li>
+        <li><strong>Choice of 2 Sides:</strong> Asian Cabbage Salad, Classic Mac Salad, or Mixed Fruit Tray</li>
+        <li><strong>BONUS:</strong> Dinner rolls & butter packets</li>
+        <li><strong>Included:</strong> Ready-to-serve trays & serving utensils</li>
+        <li><strong>Optional Upgrades:</strong> Dessert platter, beverage station, full buffet setup</li>
+      </ul>
+    </div>
   </div>
 
-  <!-- Hale Feast Tier -->
-  <div class="luau-card">
-    <div class="luau-header">
-      <h3 class="luau-title">🌴 Hale Feast</h3>
-      <span class="luau-price">Starting at $23 / person</span>
-    </div>
-    <p class="luau-subtitle">2 Proteins • Our most popular option • 30+ guests</p>
-    <ul class="luau-details">
-      <li><strong>2 Standard Proteins:</strong> Teriyaki Chicken + Kalua Pork</li>
-      <li><strong>Premium Upgrade:</strong> Swap or add Teriyaki Sliced Beef for +$5 per person</li>
-      <li><strong>Steamed White Rice</strong> (large portion)</li>
-      <li><strong>Choice of 2 Sides:</strong> Asian Cabbage Salad, Classic Mac Salad, or Mixed Fruit Tray</li>
-      <li><strong>BONUS:</strong> Dinner rolls & butter packets</li>
-      <li><strong>Included:</strong> Ready-to-serve trays & serving utensils</li>
-    </ul>
-  </div>
-
-  <!-- Hale Island Experience Tier -->
-  <div class="luau-card full-width">
-    <div class="luau-header">
-      <h3 class="luau-title">🔥 Hale Island Experience</h3>
-      <span class="luau-price">Starting at $29 / person</span>
-    </div>
-    <p class="luau-subtitle">3 Proteins • Premium experience • 50+ guests</p>
-    <ul class="luau-details">
-      <li><strong>3 Proteins:</strong> Teriyaki Chicken + Kalua Pork + Teriyaki Sliced Beef</li>
-      <li><strong>Steamed White Rice</strong> (extra-large portion)</li>
-      <li><strong>Choice of 2 Sides:</strong> Asian Cabbage Salad, Classic Mac Salad, or Mixed Fruit Tray</li>
-      <li><strong>BONUS:</strong> Dinner rolls & butter packets</li>
-      <li><strong>Included:</strong> Ready-to-serve trays & serving utensils</li>
-      <li><strong>Optional Upgrades:</strong> Dessert platter, beverage station, full buffet setup</li>
-    </ul>
-  </div>
-
-</div>
-  <!-- Add-ons / upgrades (optional but recommended) -->
+  <!-- Add-ons / Upgrades -->
   <div class="menu-grid" style="margin-top: 28px;">
     <div class="menu-item">
       <h3>Add-Ons</h3>
-      <p><strong>Protein Add-On:</strong> $16 per lb </p>
-      <p style="font-size: 0.9em; color: #666;"> Choice of Teriyaki Chicken or Kalua Pork. 2 lb minimum. </p>
+      <p><strong>Protein Add-On:</strong> $16 per lb</p>
+      <p style="font-size: 0.9em; color: #666;">Choice of Teriyaki Chicken or Kalua Pork. 2 lb minimum.</p>
     </div>
     <div class="menu-item">
       <h3>Beverages</h3>
@@ -235,205 +343,23 @@
       <p style="font-size: 0.9em; color: #666;">Buffet setup + warmers (when available)</p>
     </div>
   </div>
-<div class="sauce-highlight" style="margin-top: 30px;">
-  <p style="margin-bottom: 6px;">🌺 <strong>Specialty Island Selections</strong></p>
-  <p style="font-size: 0.95em;">
-    For select events, ask about our premium island favorites:
-    <strong>Teriyaki Garlic Shrimp</strong> and <strong>Hale Poke</strong>.
-  </p>
-  <p style="font-style: italic; font-size: 0.9em; margin-top: 8px;">
-    Available for 50+ guests • Market pricing applies • Advance notice required.
-  </p>
-</div>
 
-  <!-- Delivery / logistics note -->
   <div class="sauce-highlight" style="margin-top: 30px;">
-    <p style="margin-bottom: 5px;">🚚 <strong>Delivery & Logistics</strong></p>
-    <p style="font-weight: normal; font-size: 0.95em;">
-      Delivery fees are calculated based on distance. Free local pickup may be available upon request.
+    <p style="margin-bottom: 6px;">🌺 <strong>Specialty Island Selections</strong></p>
+    <p style="font-size: 0.95em;">
+      For select events, ask about our premium island favorites:
+      <strong>Teriyaki Garlic Shrimp</strong> and <strong>Hale Poke</strong>.
     </p>
-    <p style="font-style: italic; font-size: 0.9em; margin-top: 10px;">
-      Have questions? <a href="#contact" style="color: #1B4D3E; font-weight: bold;">Contact us</a> for a custom quote.
+    <p style="font-style: italic; font-size: 0.9em; margin-top: 8px;">
+      Available for 50+ guests • Market pricing applies • Advance notice required.
     </p>
   </div>
+
 </section>
 
 <!-- =========================
-     OPTIONAL CSS (add to your <style> area)
-     Only add this if you don't already have these styles
+     FOOD BOOTH MENU SECTION
 ========================== -->
-<style>
-  .catering-section { padding: 40px 0; }
-  .catering-header h2 { margin: 0 0 10px; }
-  .intro-text { max-width: 900px; }
-  .catering-container { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
-  .catering-package h3 { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
-  .price { font-weight: 800; white-space: nowrap; }
-  @media (max-width: 980px) { .catering-container { grid-template-columns: 1fr; } }
-</style>
- <section id="catering">
-    <style>
-        /* Catering Section Specific Styles */
-        #catering {
-            padding: 60px 20px;
-            max-width: 1100px;
-            margin: 0 auto;
-            font-family: inherit;
-            color: #333;
-            background-color: #FFF9E6; /* Cream background to match */
-        }
-
-        .catering-header {
-            margin-bottom: 20px;
-        }
-
-        /* Match the underline style from your menu */
-        .catering-header h2 {
-            color: #1B4D3E; /* Dark Green */
-            font-size: 2em;
-            display: inline-block;
-            margin-bottom: 10px;
-            border-bottom: 3px solid #FFD200; /* Bright Yellow */
-            padding-bottom: 5px;
-        }
-
-        .intro-text {
-            font-size: 1.1em;
-            margin-top: 20px;
-            line-height: 1.6;
-        }
-
-        .catering-container {
-            display: flex;
-            gap: 25px;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-bottom: 50px;
-        }
-
-        .catering-package {
-            background: #fff;
-            border-radius: 10px;
-            padding: 30px;
-            flex: 1;
-            min-width: 320px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            /* Match the Dark Green left border from your menu screenshot */
-            border-left: 6px solid #1B4D3E; 
-            text-align: left;
-        }
-
-        .catering-package h3 {
-            color: #1B4D3E;
-            margin-top: 0;
-            font-size: 1.4em;
-        }
-
-        .price-tag {
-            font-size: 1.3em;
-            color: #1B4D3E;
-            font-weight: bold;
-            display: block;
-            margin-bottom: 10px;
-        }
-
-        .subtitle {
-            font-style: italic;
-            color: #555;
-            font-size: 0.95em;
-            display: block;
-            margin-bottom: 15px;
-        }
-
-        .meal-details {
-            list-style: disc;
-            padding-left: 20px;
-            margin: 0;
-        }
-
-        .meal-details li {
-            margin-bottom: 10px;
-            line-height: 1.4;
-        }
-
-        /* Bottom Section Styles */
-        .alacarte-menu {
-            border-top: 2px solid #FFD200;
-            padding-top: 30px;
-            margin-top: 20px;
-        }
-
-        .alacarte-menu h3 {
-            color: #1B4D3E;
-            font-size: 1.5em;
-        }
-
-        .alacarte-grid {
-            display: flex;
-            justify-content: flex-start;
-            gap: 30px;
-            flex-wrap: wrap;
-            margin: 20px 0;
-        }
-
-        .alacarte-item strong {
-            color: #1B4D3E;
-        }
-
-        .custom-note {
-            font-size: 0.9em;
-            color: #333;
-        }
-
-        @media (max-width: 768px) {
-            .catering-container { flex-direction: column; }
-        }
-    </style>
-<!-- Hale Party Packages Section -->
-<div class="catering-header">
-  <h2>Hale Party Packages</h2>
-  <p class="intro-text">Aloha & welcome to our catering! Ready-to-serve trays included with every order. <strong>Orders require 48 hours notice.</strong></p>
-</div>
-
-<div class="catering-container">
-  <!-- Small Package (10 Guests) -->
-  <div class="catering-package">
-    <h3>// Hale Party Package – Small (10 Guests) $129.99</h3>
-    <span class="subtitle">Perfect for a family meal or small office lunch • Serves 10 people</span>
-    <ul class="meal-details">
-      <li><strong>64 oz Standard Protein:</strong> Teriyaki Chicken</li>
-      <li><strong>Premium Upgrade:</strong> Teriyaki Sliced Beef +$49 per tray</li>
-      <li><strong>Steamed White Rice</strong> (a generous portion)</li>
-      <li><strong>Choice of 1 Side:</strong> Asian Cabbage Salad, Classic Mac Salad, or Mixed Fruit Tray</li>
-    </ul>
-  </div>
-
-  <!-- Large Package (20 Guests) -->
-  <div class="catering-package">
-    <h3>🌸 Hale Party Package – Large (20 Guests) $259.99</h3>
-    <span class="subtitle">Our most popular choice for parties & celebrations • Serves 20 people</span>
-    <ul class="meal-details">
-      <li><strong>128 oz Standard Protein:</strong> Teriyaki Chicken</li>
-      <li><strong>Premium Upgrade:</strong> Teriyaki Sliced Beef +$79 per tray</li>
-      <li><strong>Steamed White Rice</strong> (a large portion)</li>
-      <li><strong>Choice of 2 Sides:</strong> Asian Cabbage Salad, Classic Mac Salad, or Mixed Fruit Tray</li>
-      <li><strong>BONUS:</strong> Includes 24 warm, soft dinner rolls & butter packets</li>
-    </ul>
-  </div>
-</div>
-
-<!-- Delivery & Logistics Banner -->
-<div class="sauce-highlight" style="margin-top: 30px;">
-    <p style="margin-bottom: 5px;">🚚 <strong>Delivery & Logistics</strong></p>
-    <p style="font-weight: normal; font-size: 0.95em;">
-        Delivery fees are calculated based on distance from our commissary kitchen. 
-        Free local pickup may be available upon request.
-    </p>
-    <p style="font-style: italic; font-size: 0.9em; margin-top: 10px;">
-        *For events up to 29 guests, we recommend a combination of our Party Packages. Per-person Luau Packages available for groups of 30+. <a href="#contact" style="color: #1B4D3E; font-weight: bold;">Contact us</a> for custom quotes.
-    </p>
-</div>
-
 <section id="menu">
     <h2>Hale Festival & Food Booth Menu</h2>
     <div class="menu-grid">
@@ -449,32 +375,35 @@
             <h3>Hale Chicken Bowl</h3>
             <p>Tender grilled chicken served over a bed of fluffy rice and our gochu cucumber salad.</p>
         </div>
-       <div class="menu-item">
-    <h3>Hale Beef Bowl</h3>
-    <p>1/3 lb Angus Patty marinated in our house-made teriyaki sauce, served over steamed rice with our gochu cucumber salad.</p>
-</div>
         <div class="menu-item">
-    <h3>Hale Sunrise Bowl</h3>
-    <p>A hearty island breakfast: 2 fluffy scrambled eggs and 3 thick-cut, seared Spam slices over a bed of steamed rice. Topped with furikake and fresh green onions.</p>
-    <p class="modifier"><em>Breakfast Served from 10 AM - 11:30 AM. Depending on event schedule. </em></p>
-</div>
+            <h3>Hale Beef Bowl</h3>
+            <p>1/3 lb Angus Patty marinated in our house-made teriyaki sauce, served over steamed rice with our gochu cucumber salad.</p>
+        </div>
+        <div class="menu-item">
+            <h3>Hale Sunrise Bowl</h3>
+            <p>A hearty island breakfast: 2 fluffy scrambled eggs and 3 thick-cut, seared Spam slices over a bed of steamed rice. Topped with furikake and fresh green onions.</p>
+            <p class="modifier"><em>Breakfast Served from 10 AM - 11:30 AM. Depending on event schedule.</em></p>
+        </div>
         <div class="menu-item sides-drinks">
-    <h3>Hale Sides & Drinks</h3>
-    <div class="side-options">
-        <p><strong>Gochu Cucumber Salad</strong> — <em>Our signature spicy crunch</em></p>
-        <p><strong>Maui Style Chips</strong> — <em>Crispy island favorites</em></p>
-        <p><strong>Hawaiian Sun</strong> — <em>Assorted tropical flavors</em></p>
+            <h3>Hale Sides & Drinks</h3>
+            <div class="side-options">
+                <p><strong>Gochu Cucumber Salad</strong> — <em>Our signature spicy crunch</em></p>
+                <p><strong>Maui Style Chips</strong> — <em>Crispy island favorites</em></p>
+                <p><strong>Hawaiian Sun</strong> — <em>Assorted tropical flavors</em></p>
+            </div>
+            <p class="availability" style="font-size: 0.85em; color: #666; margin-top: 10px;">*Availability may vary by location</p>
+        </div>
     </div>
-    <p class="availability">*Availability may vary by location</p>
-</div>
-    </div>
-    <h3 style="margin-top:40px;">Signature Sauces</h3>
+    <h3 style="margin-top:40px; color: var(--dark-green);">Signature Sauces</h3>
     <div class="sauce-highlight">
         🔥 Hale Lava Mayo | 🌴 Hale Teri Sauce
- 
+    </div>
 </section>
 
-<section id="events" style="background-color: #f2f2f2; width: 100%; max-width: 100%; box-sizing: border-box;">
+<!-- =========================
+     EVENTS SECTION
+========================== -->
+<section id="events" style="background-color: #f2f2f2; width: 100%; max-width: 100%;">
     <div style="max-width: 900px; margin: auto;">
         <h2>Upcoming Festivals & Fairs</h2>
         <p>Catch our food booth at these upcoming seasonal events:</p>
@@ -488,60 +417,20 @@
     </div>
 </section>
 
-          
-</section>
-<section id="contact" style="background-color: #f2f2f2; width: 100%; max-width: 100%; box-sizing: border-box;">
-    <div style="max-width: 900px; margin: auto;">
-        <style>
-        #contact h2 { 
-            color: #1B4D3E; 
-            border-bottom: 3px solid #FFD200; 
-            display: inline-block; 
-            padding-bottom: 5px; 
-        }
-        .contact-form { 
-            max-width: 600px; 
-            margin: 40px auto 20px auto; /* Bottom margin reduced to 20px */
-            display: flex; 
-            flex-direction: column; 
-            gap: 15px; 
-            text-align: left; 
-        }
-        .contact-form input, .contact-form textarea { 
-            padding: 12px; 
-            border: 1px solid #ccc; 
-            border-radius: 5px; 
-            width: 100%; 
-            box-sizing: border-box; 
-            background-color: #ffffff; /* keeps input fields white for readability */
-        }
-        .contact-form button { 
-            background-color: #1B4D3E; 
-            color: white; 
-            padding: 15px; 
-            border: none; 
-            border-radius: 5px; 
-            font-weight: bold; 
-            cursor: pointer; 
-        }
-    </style>
-
-   <section id="contact" style="background-color:#f2f2f2; width:100%; max-width:100%; box-sizing:border-box;">
-  <div style="max-width:900px; margin:auto;">
+<!-- =========================
+     CONTACT SECTION
+========================== -->
+<section id="contact" style="background-color: #f2f2f2; width: 100%; max-width: 100%;">
+  <div style="max-width: 900px; margin: auto;">
     <h2>Contact Us</h2>
     <p>Have questions or want to book us for an event? Send details below and we’ll reply within 24 hours.</p>
 
-    <form action="https://formspree.io/f/xjgvganv" method="POST">
-  <!-- Optional but highly recommended -->
-  <input type="hidden" name="_subject" value="New Catering Quote Request – Teriyaki Hale">
-  <!-- If you have a thank-you page, use it. If not, remove this line. -->
-  <input type="hidden" name="_next" value="https://teriyakihale.com/#contact">
-
+    <form class="contact-form" action="https://formspree.io/f/xjgvganv" method="POST">
+      <input type="hidden" name="_subject" value="New Catering Quote Request – Teriyaki Hale">
+      <input type="hidden" name="_next" value="https://teriyakihale.com/#contact">
 
       <input type="text" name="name" placeholder="Your Name" required>
-
       <input type="tel" name="phone" placeholder="Your Phone (best number to text/call)" required>
-
       <input type="email" name="email" placeholder="Your Email" required>
 
       <div style="display:grid; grid-template-columns:1fr 1fr; gap:18px;">
@@ -561,11 +450,11 @@
 
       <select name="package_interest" required>
         <option value="" disabled selected>Package Interested In</option>
-        <option>Hale Ohana (25+ guests)</option>
-        <option>Hale Luau (25+ guests)</option>
-        <option>Hale Island (50+ guests)</option>
-        <option>Hale Party Package — Small (4–5 guests)</option>
-        <option>Hale Party Package — Large (8–10 guests)</option>
+        <option>Hale Party Package — Small (10 guests)</option>
+        <option>Hale Party Package — Large (20 guests)</option>
+        <option>Hale Luau (30+ guests)</option>
+        <option>Hale Feast (30+ guests)</option>
+        <option>Hale Island Experience (50+ guests)</option>
         <option>Not Sure — Help Me Choose</option>
       </select>
 
@@ -580,8 +469,7 @@
       <select name="beef_upgrade">
         <option value="" disabled selected>Beef Upgrade (optional)</option>
         <option>No beef upgrade</option>
-        <option>Add Beef (+$3 per person)</option>
-        <option>Beef as main protein (+$4 per person)</option>
+        <option>Add Teriyaki Sliced Beef Upgrade</option>
       </select>
 
       <select name="specialty_items">
@@ -596,15 +484,11 @@
 
       <textarea name="message" rows="5" placeholder="Tell us about your event (venue, dietary needs, timing, etc.)..." required></textarea>
 
-      <button type="submit" style="background:#1B4D3E; color:#fff; padding:14px 18px; border:none; border-radius:6px; font-weight:700;">
-        Request Quote
-      </button>
+      <button type="submit">Request Quote</button>
 
-     <p style="font-size:0.9em; color:#666; margin-top:18px;">
-
-        * Minimums: 25 guests for catering packages (50+ for Hale Island). Specialty items are market price and availability may vary.
+      <p style="font-size:0.9em; color:#666; margin-top:10px;">
+        * Notice requirement: 48 hours. Minimums: 10 guests for Party Packages, 30 guests for Luau Packages (50+ for Hale Island Experience). Specialty items are market price and subject to availability.
       </p>
-
     </form>
 
     <div class="sauce-highlight" style="margin-top:18px;">
@@ -615,14 +499,14 @@
   </div>
 </section>
 
-<!-- ======= About Us Section ======= -->
+<!-- =========================
+     ABOUT SECTION
+========================== -->
 <section id="about">
-  <div class="section-header">
-    <h2>About Teriyaki Hale</h2>
-  </div>
+  <h2>About Teriyaki Hale</h2>
 
   <h3>Hale Means House or Home</h3>
-  <h3>Aloha Means Welcome to Our House</h3>
+  <h3 style="color: var(--dark-green);">Aloha Means Welcome to Our House</h3>
 
   <p>
     Teriyaki Hale brings bold, welcoming island flavors to the heart of Utah. 
@@ -652,13 +536,12 @@
   </p>
 </section>
 
-
-<!DOCTYPE html>
-<html>
-<head>
-    <section id="gallery" style="padding: 60px 20px; background-color: #FFF9E6;">
+<!-- =========================
+     GALLERY SECTION
+========================== -->
+<section id="gallery" style="padding: 60px 20px; background-color: #FFF9E6;">
     <div style="max-width: 1000px; margin: 0 auto; text-align: center;">
-        <h2 style="color: #1B4D3E; border-bottom: 3px solid #FFCC00; display: inline-block; padding-bottom: 5px; margin-bottom: 30px;">Hale Gallery</h2>
+        <h2>Hale Gallery</h2>
         
         <div class="menu-grid">
             <div class="menu-item" style="padding: 0; overflow: hidden;">
@@ -675,10 +558,13 @@
         </div>
     </div>
 </section>
-    <!-- Your green footer -->
-  <footer style="background-color: #1B4D3E; color: white; padding: 30px 20px; text-align: center;">
+
+<!-- =========================
+     FOOTER SECTION
+========================== -->
+<footer>
     <p style="margin-bottom: 15px;">
-        <a href="/" style="color: white; text-decoration: none; margin: 0 10px;">Home</a> | 
+        <a href="#" style="color: white; text-decoration: none; margin: 0 10px;">Home</a> | 
         <a href="#menu" style="color: white; text-decoration: none; margin: 0 10px;">Menu</a> | 
         <a href="#about" style="color: white; text-decoration: none; margin: 0 10px;">About Us</a> | 
         <a href="#gallery" style="color: white; text-decoration: none; margin: 0 10px;">Gallery</a>
@@ -687,5 +573,6 @@
         &copy; 2025 Teriyaki Hale. All Rights Reserved.
     </p>
 </footer>
+
 </body>
 </html>
